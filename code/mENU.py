@@ -14,8 +14,8 @@ class MENU:
 
     def run(self, ):
         menu_option = 0
-        #pygame.mixer_music.load('./asset/Menu.mp3')
-        #pygame.mixer_music.play(-1)
+        # pygame.mixer_music.load('./asset/Menu.mp3')
+        # pygame.mixer_music.play(-1)
         while True:
             self.window.blit(source=self.surf, dest=self.rect)
             self.menu_text(50, text="Garantia", text_color=COLOR_ORANGE, text_center_pos=((WIN_WIDTH / 2), 70))
@@ -23,11 +23,12 @@ class MENU:
 
             for i in range(len(MENU_OPTION)):
                 if i == menu_option:
-                    self.menu_text(20, text=MENU_OPTION[i], text_color=COLOR_ORANGE, text_center_pos=((WIN_WIDTH / 2), 200 + 25 * i))
+                    self.menu_text(20, text=MENU_OPTION[i], text_color=COLOR_ORANGE,
+                                   text_center_pos=((WIN_WIDTH / 2), 200 + 25 * i))
 
                 else:
-                    self.menu_text(20, text=MENU_OPTION[i], text_color=COLOR_WHITE, text_center_pos=((WIN_WIDTH / 2), 200 + 25 * i))
-
+                    self.menu_text(20, text=MENU_OPTION[i], text_color=COLOR_WHITE,
+                                   text_center_pos=((WIN_WIDTH / 2), 200 + 25 * i))
 
             pygame.display.flip()
 
@@ -48,6 +49,8 @@ class MENU:
                             menu_option -= 1
                         else:
                             menu_option = len(MENU_OPTION)
+                    if event.key == pygame.K_RETURN:
+                        return MENU_OPTION[menu_option]
 
     def menu_text(self, text_size: int, text: str, text_color: tuple, text_center_pos: tuple):
         text_font: Font = pygame.font.SysFont(name="Lucida Sans Typewriter", size=text_size)
