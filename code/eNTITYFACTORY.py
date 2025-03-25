@@ -13,5 +13,4 @@ class ENTITYFACTORY:
                 for i in range(6):
                     list_bg.append(BACKGROUND(f'Level1Bg{i}', position=(0, 0)))
                     list_bg.append(BACKGROUND(f'Level1Bg{i}', position=(WIN_WIDTH, 0)))
-
                 return list_bg
