@@ -18,9 +18,12 @@ class LEVEL:
         self.game_mode = game_mode
         self.entity_list: list[Entity] = []
         self.entity_list.extend(ENTITYFACTORY.get_entity('Level1Bg'))
+        self.entity_list.append(ENTITYFACTORY.get_entity('Parado'))
         self.timeout = 20000
 
     def run(self):
+        pygame.mixer_music.load(f'./asset/{self.name}.mp3')
+        pygame.mixer_music.play(-1)
         clock = pygame.time.Clock()
         while True:
             clock.tick(60)
