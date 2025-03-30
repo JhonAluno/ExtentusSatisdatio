@@ -1,8 +1,5 @@
-#!/usr/bin/python
-# -*- coding: utf-8 -*-
 import pygame
 
-from code import lEVEL
 from code.Const import WIN_WIDTH, WIN_HEIGHT, MENU_OPTION
 from code.lEVEL import LEVEL
 from code.mENU import MENU
@@ -37,4 +34,4 @@ class JOGO:
                 pygame.quit()
                 quit()
             else:
-                pass
+                pygame.display.update()

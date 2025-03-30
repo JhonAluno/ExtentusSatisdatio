@@ -1,12 +1,10 @@
-#!/usr/bin/python
-# -*- coding: utf-8 -*-
 import sys
 
-import pygame.display
+import pygame
 from pygame import Surface, Rect
 from pygame.font import Font
 
-from code.Const import WIN_HEIGHT, COLOR_WHITE
+from code.Const import COLOR_WHITE, WIN_HEIGHT
 from code.eNTITYFACTORY import ENTITYFACTORY
 from code.entity import Entity
 
