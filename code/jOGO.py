@@ -9,6 +9,7 @@ class JOGO:
     def __init__(self):
         pygame.init()
         self.window = pygame.display.set_mode(size=(WIN_WIDTH, WIN_HEIGHT))
+        pygame.display.set_caption('GARANTIA EX-TENDIDA')
         self.itens_pegos = None
         self.vida_inimigo = None
 

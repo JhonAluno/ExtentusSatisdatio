@@ -15,6 +15,9 @@ ENTITY_SPEED = {
     'Level1Bg3': 2,
     'Level1Bg4': -1,
     'Level1Bg5': 3,
+    'Parado': 1,
+    'Hurt': 5,
+
 }
 
 # M
