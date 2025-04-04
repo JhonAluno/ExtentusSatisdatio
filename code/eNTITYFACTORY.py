@@ -17,12 +17,11 @@ class ENTITYFACTORY:
                     list_bg.append(BACKGROUND(f'Level1Bg{i}', position=(WIN_WIDTH, 0)))
                 return list_bg
             case 'Parado':
-                return JOGADOR('Parado', (10, WIN_HEIGHT / 2))
+                return JOGADOR('Parado', (10, 196))
             case 'Hurt':
-                return JOGADOR('Hurt', (30, WIN_HEIGHT / 2))
+                return JOGADOR('Hurt', (30, 196))
             case 'Scream':
-                return INIMIGO('Scream', (WIN_WIDTH + 10, random.randint(0, WIN_HEIGHT)))
-            # case 'INIMIGO2':
+                return INIMIGO('Scream', (WIN_WIDTH + 10, 228))            # case 'INIMIGO2':
             #     return INIMIGO('INIMIGO2', (WIN_WIDTH + 10, random.randint(0,0)))
 
 
