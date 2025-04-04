@@ -1,13 +1,16 @@
-import pygame
-
-class SpriteSheet():
-	def __init__(self, image):
-		self.sheet = image
-
-	def get_image(self, frame, width, height, scale, colour):
-		image = pygame.Surface((width, height)).convert_alpha()
-		image.blit(self.sheet, (0, 0), ((frame * width), 0, width, height))
-		image = pygame.transform.scale(image, (width * scale, height * scale))
-		image.set_colorkey(colour)
-
-		# return image
+# import pygame
+#
+#
+# class SpriteSheet():
+#     def __init__(self, image):
+#         self.sheet = image
+#
+#     def get_image(self, frame, WIN_WIDTH, WIN_HEIGHT, scale, colour):
+#         image = pygame.Surface((WIN_WIDTH, WIN_HEIGHT)).convert_alpha()
+#         image.blit(self.sheet, (0, 0), ((frame * WIN_WIDTH), 0, WIN_WIDTH, WIN_HEIGHT))
+#         image = pygame.transform.scale(image, (WIN_WIDTH * scale, WIN_HEIGHT * scale))
+#         image.set_colorkey(colour)
+#
+#         return image
+#
+#

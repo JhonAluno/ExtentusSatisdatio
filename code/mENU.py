@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 import pygame.image
-from pygame import Rect, Surface
+from pygame import Rect, Surface, K_ESCAPE, KEYDOWN
 from pygame.font import Font
 from code.Const import WIN_WIDTH, COLOR_ORANGE, MENU_OPTION, COLOR_WHITE, BLACK
 
@@ -14,8 +14,8 @@ class MENU:
 
     def run(self, ):
         menu_option = 0
-        pygame.mixer_music.load('./asset/Menu.mp3')
-        pygame.mixer_music.play(-1)
+        # pygame.mixer_music.load('./asset/Menu.mp3')
+        # pygame.mixer_music.play(-1)
         while True:
             self.window.blit(source=self.surf, dest=self.rect)
             self.menu_text(50, text="Garantia", text_color=BLACK, text_center_pos=((WIN_WIDTH / 2), 70))
@@ -34,7 +34,8 @@ class MENU:
 
             # Check for all events
             for event in pygame.event.get():
-                if event.type == pygame.QUIT:
+                if event.type == pygame.QUIT or event.type == KEYDOWN and event.key == K_ESCAPE:
+                # if event.type == pygame.QUIT:
                     pygame.quit()  # Close Window
                     quit()  # End pygame
                 if event.type == pygame.KEYDOWN:

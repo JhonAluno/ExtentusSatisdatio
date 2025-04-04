@@ -5,6 +5,8 @@ from abc import ABC, abstractmethod
 import pygame.image
 
 
+
+
 class Entity(ABC):
     def __init__(self, name: str, position: tuple):
         self.name = name

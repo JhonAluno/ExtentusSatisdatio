@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 import pygame.key
 
-from code.Const import ENTITY_SPEED, WIN_WIDTH
+from code.Const import ENTITY_SPEED, WIN_WIDTH, PLAYER_KEY_UP, PLAYER_KEY_DOWN, PLAYER_KEY_LEFT, PLAYER_KEY_RIGHT
 from code.entity import Entity
 
 
@@ -24,9 +24,13 @@ class JOGADOR(Entity):
 
     def move(self, ):
         pressed_key = pygame.key.get_pressed()
-        if pressed_key[pygame.K_LEFT] and self.rect.left > 0:
+        if pressed_key[PLAYER_KEY_UP[self.name]]: #and self.rect.left > 0:
+            self.rect.centery -= ENTITY_SPEED[self.name]
+        if pressed_key[PLAYER_KEY_DOWN[self.name]]: #and self.rect.right < WIN_WIDTH:
+            self.rect.centery += ENTITY_SPEED[self.name]
+        if pressed_key[PLAYER_KEY_LEFT[self.name]]: #and self.rect.left > 0:
             self.rect.centerx -= ENTITY_SPEED[self.name]
-        if pressed_key[pygame.K_RIGHT]: #and self.rect.right < WIN_WIDTH:
+        if pressed_key[PLAYER_KEY_RIGHT[self.name]]: #and self.rect.right < WIN_WIDTH:
             self.rect.centerx += ENTITY_SPEED[self.name]
 
         pass
