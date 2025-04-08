@@ -16,6 +16,7 @@ class JOGADOR(Entity):
 
     def pegarItem(self, ITEM):
         pass
+    #foi
 
     def atacarInimigo(self, INIMIGO):
         pass
