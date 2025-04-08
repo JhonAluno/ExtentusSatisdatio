@@ -18,9 +18,9 @@ ENTITY_SPEED = {
     'Level1Bg3': 2,
     'Level1Bg4': -1,
     'Level1Bg5': 3,
-    'Parado': 1,
-    'Hurt': 1,
-    'Scream': 3,
+    'player1Run': 8,
+    'Hurt': 8,
+    'Scream': 2,
 }
 
 # M
@@ -31,11 +31,11 @@ MENU_OPTION = ('NEW GAME 1P',
                'EXIT',)
 
 #P
-PLAYER_KEY_UP = {'Parado': pygame.K_UP, 'Hurt': pygame.K_w}
-PLAYER_KEY_DOWN = {'Parado': pygame.K_DOWN, 'Hurt': pygame.K_s}
-PLAYER_KEY_LEFT = {'Parado': pygame.K_LEFT, 'Hurt': pygame.K_a}
-PLAYER_KEY_RIGHT = {'Parado': pygame.K_RIGHT, 'Hurt': pygame.K_d}
-PLAYER_KEY_SHOOT ={'Parado': pygame.K_RCTRL, 'Hurt': pygame.K_LCTRL}
+PLAYER_KEY_UP = {'player1Run': pygame.K_UP, 'player2Run': pygame.K_w}
+PLAYER_KEY_DOWN = {'player1Run': pygame.K_DOWN, 'player2Run': pygame.K_s}
+PLAYER_KEY_LEFT = {'player1Run': pygame.K_LEFT, 'player2Run': pygame.K_a}
+PLAYER_KEY_RIGHT = {'player1Run': pygame.K_RIGHT, 'player2Run': pygame.K_d}
+PLAYER_KEY_SHOOT ={'player1Run': pygame.K_RCTRL, 'player2Run': pygame.K_LCTRL}
 
 # S
 SCREEN_WIDTH = 500

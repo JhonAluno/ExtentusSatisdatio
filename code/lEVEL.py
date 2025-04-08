@@ -7,6 +7,7 @@ from pygame.font import Font
 from code.Const import COLOR_WHITE, WIN_HEIGHT, MENU_OPTION, EVENT_INIME
 from code.eNTITYFACTORY import ENTITYFACTORY
 from code.entity import Entity
+from code.sprites import sprite
 
 
 class LEVEL:
@@ -17,11 +18,10 @@ class LEVEL:
         self.game_mode = game_mode
         self.entity_list: list[Entity] = []
         self.entity_list.extend(ENTITYFACTORY.get_entity('Level1Bg'))
-        self.entity_list.append(ENTITYFACTORY.get_entity('Parado'))
+        self.entity_list.append(ENTITYFACTORY.get_entity('player1Run'))
         if game_mode in [MENU_OPTION[1], MENU_OPTION[2]]:
-            self.entity_list.append(ENTITYFACTORY.get_entity('Hurt'))
+            self.entity_list.append(ENTITYFACTORY.get_entity('player2Run'))
         pygame.time.set_timer(EVENT_INIME, 2000)
-
 
     def run(self):
         pygame.mixer_music.load(f'./asset/{self.name}.mp3')
@@ -47,6 +47,9 @@ class LEVEL:
             self.level_text(text_size=14, text=f'entidades: {len(self.entity_list)}', text_color=COLOR_WHITE,
                             text_pos=(10, WIN_HEIGHT - 20))
             pygame.display.flip()
+
+            sprite.correImagem(entity_list=self.entity_list)
+            pass
 
     def level_text(self, text_size: int, text: str, text_color: tuple, text_pos: tuple):
         text_font: Font = pygame.font.SysFont(name="Lucida Sans Typewriter", size=text_size)

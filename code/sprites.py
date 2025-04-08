@@ -1,12 +1,15 @@
 # import pygame
 # import spritesheet
 # from code.Const import BLACK, BG
-#
-# # pygame.init()
-# #
-# # SCREEN_WIDTH = 500
-# # SCREEN_HEIGHT = 500
-# #
+from code.entity import Entity
+
+
+class sprite:
+
+    @staticmethod
+    def correImagem(entity_list: list[Entity]):
+        pass
+
 # # screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 # # pygame.display.set_caption('Spritesheets')
 #
